@@ -20,6 +20,18 @@
                             <view contentMode="scaleToFill" id="Mpb-pV-a6D">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" id="aBq-xe-pAi">
+                                        <rect key="frame" x="47" y="199" width="280" height="270"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
@@ -31,8 +43,30 @@
             </objects>
             <point key="canvasLocation" x="300.5" y="520.5"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="eUp-J9-Opf">
+            <objects>
+                <viewController id="xeL-z0-Qgv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EAU-SV-DqJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="MainScreen-Clean Copy" id="4Ej-FO-RLp">
+                                <rect key="frame" x="0.0" y="0.0" width="376" height="667"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TBh-dA-bRm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="797.5" y="520.5"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="MainScreen-Clean Copy" width="376" height="667"/>
         <image name="image" width="800" height="600"/>
     </resources>
 </document>
