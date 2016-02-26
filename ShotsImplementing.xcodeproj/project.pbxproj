@@ -12,6 +12,7 @@
 		65BBAB021C80134200B3A42B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65BBAB001C80134200B3A42B /* Main.storyboard */; };
 		65BBAB041C80134200B3A42B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65BBAB031C80134200B3A42B /* Assets.xcassets */; };
 		65BBAB071C80134200B3A42B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65BBAB051C80134200B3A42B /* LaunchScreen.storyboard */; };
+		65BBAB101C80156300B3A42B /* TipoType - Libertad.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65BBAB0F1C80156300B3A42B /* TipoType - Libertad.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		65BBAB031C80134200B3A42B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65BBAB061C80134200B3A42B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65BBAB081C80134200B3A42B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65BBAB0F1C80156300B3A42B /* TipoType - Libertad.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TipoType - Libertad.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +62,17 @@
 				65BBAB031C80134200B3A42B /* Assets.xcassets */,
 				65BBAB051C80134200B3A42B /* LaunchScreen.storyboard */,
 				65BBAB081C80134200B3A42B /* Info.plist */,
+				65BBAB0E1C80156300B3A42B /* font */,
 			);
 			path = ShotsImplementing;
+			sourceTree = "<group>";
+		};
+		65BBAB0E1C80156300B3A42B /* font */ = {
+			isa = PBXGroup;
+			children = (
+				65BBAB0F1C80156300B3A42B /* TipoType - Libertad.otf */,
+			);
+			path = font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +134,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65BBAB101C80156300B3A42B /* TipoType - Libertad.otf in Resources */,
 				65BBAB071C80134200B3A42B /* LaunchScreen.storyboard in Resources */,
 				65BBAB041C80134200B3A42B /* Assets.xcassets in Resources */,
 				65BBAB021C80134200B3A42B /* Main.storyboard in Resources */,
