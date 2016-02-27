@@ -18,6 +18,8 @@
             <string>Libertad</string>
             <string>Libertad</string>
             <string>Libertad</string>
+            <string>Libertad</string>
+            <string>Libertad</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -129,7 +131,7 @@
                                                 <rect key="frame" x="0.0" y="17" width="201" height="42"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Libertad" family="Libertad" pointSize="21"/>
-                                                <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <inset key="contentEdgeInsets" minX="18" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 <inset key="titleEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 <state key="normal" title="Profile" image="Popover-Profile"/>
                                             </button>
@@ -137,7 +139,7 @@
                                                 <rect key="frame" x="0.0" y="67" width="201" height="42"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Libertad" family="Libertad" pointSize="21"/>
-                                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <inset key="contentEdgeInsets" minX="13" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 <inset key="titleEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 <state key="normal" title="Favorites" image="Popover-Favorites"/>
                                             </button>
@@ -145,7 +147,7 @@
                                                 <rect key="frame" x="0.0" y="117" width="201" height="42"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Libertad" family="Libertad" pointSize="21"/>
-                                                <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <inset key="contentEdgeInsets" minX="18" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 <inset key="titleEdgeInsets" minX="17" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 <state key="normal" title="Share" image="popover-shares"/>
                                             </button>
@@ -219,32 +221,65 @@
             <point key="canvasLocation" x="300.5" y="520.5"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="eUp-J9-Opf">
+        <scene sceneID="QUj-eW-6fS">
             <objects>
-                <viewController id="xeL-z0-Qgv" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="EAU-SV-DqJ">
+                <viewController id="1FA-Cn-47H" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="czp-g5-rN8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="MainScreen-Share Copy" id="NYV-Tq-pyc">
-                                <rect key="frame" x="-1" y="0.0" width="376" height="667"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" id="2jz-Hf-4AB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="281"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vqH-ee-Zp2">
+                                <rect key="frame" x="23" y="23" width="47" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="BackButton"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mike | Creative Mints" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="523-ln-PUn">
+                                <rect key="frame" x="75" y="311" width="213" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Libertad" family="Libertad" pointSize="24"/>
+                                <color key="textColor" red="0.11764705882352941" green="0.66666666666666663" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" id="cAy-7g-r9r">
+                                <rect key="frame" x="23" y="304" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <real key="value" value="17.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" id="qc5-7q-8z1">
+                                <rect key="frame" x="23" y="356" width="329" height="288"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">You guys, the new "How To Draw: drawing and sketching objects and environments from your imagination" book by S. Robertson is just amazing! I spent the whole weekend gobbling it up and of course I couldn't help but take the watercolors myself! :)
+
+Fill up the gas tank and go check out the attachment!
+
+Behance</string>
+                                <fontDescription key="fontDescription" name="Libertad" family="Libertad" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TBh-dA-bRm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SUy-2N-Few" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="797.5" y="520.5"/>
+            <point key="canvasLocation" x="790.5" y="520.5"/>
         </scene>
     </scenes>
     <resources>
+        <image name="BackButton" width="40" height="40"/>
         <image name="DialogSheet-Favorites" width="33" height="33"/>
         <image name="Email-Button" width="106" height="106"/>
         <image name="Facebook-Button" width="106" height="106"/>
-        <image name="MainScreen-Share Copy" width="376" height="667"/>
         <image name="Popover-Bg" width="201" height="165"/>
         <image name="Popover-Favorites" width="22" height="20"/>
         <image name="Popover-Profile" width="17" height="19"/>
