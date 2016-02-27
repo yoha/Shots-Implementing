@@ -43,15 +43,19 @@
                                         <rect key="frame" x="23" y="175" width="329" height="317"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" id="QYa-yj-qFG">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Jka-AX-676">
                                                 <rect key="frame" x="0.0" y="0.0" width="329" height="247"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
+                                                <state key="normal" image="image"/>
+                                                <connections>
+                                                    <segue destination="1FA-Cn-47H" kind="modal" animates="NO" id="ZcX-4s-fR4"/>
+                                                </connections>
+                                            </button>
                                             <view contentMode="scaleToFill" id="V1c-bv-WBD">
                                                 <rect key="frame" x="0.0" y="0.0" width="329" height="70"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bug" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UDb-bu-7BQ">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bug" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UDb-bu-7BQ">
                                                         <rect key="frame" x="145" y="12" width="40" height="22"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="Libertad" family="Libertad" pointSize="24"/>
@@ -119,7 +123,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" backgroundImage="UserButton"/>
                                     </button>
-                                    <view contentMode="scaleToFill" id="50r-Bw-ZpK">
+                                    <view hidden="YES" contentMode="scaleToFill" id="50r-Bw-ZpK">
                                         <rect key="frame" x="151" y="100" width="201" height="165"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
@@ -154,7 +158,7 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
-                                    <view contentMode="scaleToFill" id="rRA-Gn-VuA">
+                                    <view hidden="YES" contentMode="scaleToFill" id="rRA-Gn-VuA">
                                         <rect key="frame" x="0.0" y="432" width="376" height="235"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
