@@ -23,10 +23,10 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ShotsImplementing" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="ShotsImplementing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -48,6 +48,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="image"/>
                                                 <connections>
+                                                    <action selector="imageButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eXr-sQ-bT9"/>
                                                     <segue destination="1FA-Cn-47H" kind="modal" animates="NO" id="ZcX-4s-fR4"/>
                                                 </connections>
                                             </button>
@@ -100,6 +101,9 @@
                                                 <state key="normal" title="Like" image="like">
                                                     <color key="titleColor" red="0.23921568627450979" green="0.25882352941176467" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="likeButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ct9-bl-uOT"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ePC-Kw-guB">
                                                 <rect key="frame" x="165" y="247" width="164" height="70"/>
@@ -109,6 +113,9 @@
                                                 <state key="normal" title="Share" image="share">
                                                     <color key="titleColor" red="0.23921568627450979" green="0.25882352941176467" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="shareButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oBp-DR-PZg"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.93725490196078431" green="0.96078431372549022" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
@@ -219,6 +226,22 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="OQ2-Jk-Syt" id="Kt4-pa-iht"/>
+                        <outlet property="backgroundMaskView" destination="Mpb-pV-a6D" id="fB4-Dn-OPD"/>
+                        <outlet property="dialogAvatarImageView" destination="Uct-VW-zq0" id="AAe-kM-xHM"/>
+                        <outlet property="dialogFavoritesLabel" destination="lcL-C5-hwy" id="c0b-Ih-4T5"/>
+                        <outlet property="dialogHeaderAuthorLabel" destination="OmW-Qa-AaT" id="2eq-jW-pHg"/>
+                        <outlet property="dialogHeaderTitleLabel" destination="UDb-bu-7BQ" id="fBO-9S-x6a"/>
+                        <outlet property="dialogHeaderView" destination="V1c-bv-WBD" id="qMn-8r-Ter"/>
+                        <outlet property="dialogImageButton" destination="Jka-AX-676" id="821-l3-2i3"/>
+                        <outlet property="dialogView" destination="aBq-xe-pAi" id="dAb-wB-N9f"/>
+                        <outlet property="likeButton" destination="Cii-2l-UnY" id="h5K-Mz-e1H"/>
+                        <outlet property="popOverView" destination="50r-Bw-ZpK" id="G7F-lm-gbt"/>
+                        <outlet property="shareButton" destination="ePC-Kw-guB" id="82J-4o-eYs"/>
+                        <outlet property="shareSheetView" destination="rRA-Gn-VuA" id="syb-1n-vjD"/>
+                        <outlet property="userProfileButton" destination="Uhg-N0-LUN" id="uDP-tZ-jAR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

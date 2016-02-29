@@ -8,22 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		65BBAAFD1C80134200B3A42B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BBAAFC1C80134200B3A42B /* AppDelegate.swift */; };
-		65BBAAFF1C80134200B3A42B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BBAAFE1C80134200B3A42B /* ViewController.swift */; };
 		65BBAB021C80134200B3A42B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65BBAB001C80134200B3A42B /* Main.storyboard */; };
 		65BBAB041C80134200B3A42B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65BBAB031C80134200B3A42B /* Assets.xcassets */; };
 		65BBAB071C80134200B3A42B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65BBAB051C80134200B3A42B /* LaunchScreen.storyboard */; };
 		65BBAB101C80156300B3A42B /* TipoType - Libertad.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65BBAB0F1C80156300B3A42B /* TipoType - Libertad.otf */; };
+		65DA4DFA1C849DE600E0DF96 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DA4DF91C849DE600E0DF96 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		65BBAAF91C80134200B3A42B /* ShotsImplementing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShotsImplementing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65BBAAFC1C80134200B3A42B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		65BBAAFE1C80134200B3A42B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		65BBAB011C80134200B3A42B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		65BBAB031C80134200B3A42B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65BBAB061C80134200B3A42B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65BBAB081C80134200B3A42B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65BBAB0F1C80156300B3A42B /* TipoType - Libertad.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TipoType - Libertad.otf"; sourceTree = "<group>"; };
+		65DA4DF91C849DE600E0DF96 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				65BBAAFC1C80134200B3A42B /* AppDelegate.swift */,
-				65BBAAFE1C80134200B3A42B /* ViewController.swift */,
+				65DA4DF91C849DE600E0DF96 /* HomeViewController.swift */,
 				65BBAB001C80134200B3A42B /* Main.storyboard */,
 				65BBAB031C80134200B3A42B /* Assets.xcassets */,
 				65BBAB051C80134200B3A42B /* LaunchScreen.storyboard */,
@@ -148,8 +148,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65BBAAFF1C80134200B3A42B /* ViewController.swift in Sources */,
 				65BBAAFD1C80134200B3A42B /* AppDelegate.swift in Sources */,
+				65DA4DFA1C849DE600E0DF96 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +297,7 @@
 				65BBAB0D1C80134200B3A42B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
