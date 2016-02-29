@@ -48,7 +48,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="image"/>
                                                 <connections>
-                                                    <action selector="imageButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eXr-sQ-bT9"/>
+                                                    <action selector="dialogImageButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aXn-Qc-T0d"/>
                                                     <segue destination="1FA-Cn-47H" kind="modal" animates="NO" id="ZcX-4s-fR4"/>
                                                 </connections>
                                             </button>
@@ -129,6 +129,9 @@
                                         <rect key="frame" x="304" y="45" width="47" height="47"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" backgroundImage="UserButton"/>
+                                        <connections>
+                                            <action selector="userProfileButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l1R-nd-rgC"/>
+                                        </connections>
                                     </button>
                                     <view hidden="YES" contentMode="scaleToFill" id="50r-Bw-ZpK">
                                         <rect key="frame" x="151" y="100" width="201" height="165"/>
@@ -237,9 +240,9 @@
                         <outlet property="dialogImageButton" destination="Jka-AX-676" id="821-l3-2i3"/>
                         <outlet property="dialogView" destination="aBq-xe-pAi" id="dAb-wB-N9f"/>
                         <outlet property="likeButton" destination="Cii-2l-UnY" id="h5K-Mz-e1H"/>
-                        <outlet property="popOverView" destination="50r-Bw-ZpK" id="G7F-lm-gbt"/>
                         <outlet property="shareButton" destination="ePC-Kw-guB" id="82J-4o-eYs"/>
                         <outlet property="shareSheetView" destination="rRA-Gn-VuA" id="syb-1n-vjD"/>
+                        <outlet property="userPopoverView" destination="50r-Bw-ZpK" id="jks-Jf-F0Z"/>
                         <outlet property="userProfileButton" destination="Uhg-N0-LUN" id="uDP-tZ-jAR"/>
                     </connections>
                 </viewController>

@@ -16,7 +16,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var backgroundMaskView: UIView!
     @IBOutlet weak var dialogView: UIView!
-    @IBOutlet weak var popOverView: UIView!
+    @IBOutlet weak var userPopoverView: UIView!
     @IBOutlet weak var shareSheetView: UIView!
     
     @IBOutlet weak var dialogHeaderView: UIView!
@@ -30,14 +30,18 @@ class HomeViewController: UIViewController {
     
     // MARK: - IBAction Methods
     
-    @IBAction func imageButtonDidTouch(sender: UIButton) {
+    @IBAction func userProfileButtonDidTouch(sender: UIButton) {
+        self.userPopoverView.hidden = false
+    }
+    
+    @IBAction func dialogImageButtonDidTouch(sender: UIButton) {
     }
     
     @IBAction func likeButtonDidTouch(sender: UIButton) {
     }
     
     @IBAction func shareButtonDidTouch(sender: UIButton) {
-        
+        self.shareSheetView.hidden = false
     }
 
 }
