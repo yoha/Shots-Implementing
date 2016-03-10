@@ -43,5 +43,14 @@ class HomeViewController: UIViewController {
     @IBAction func shareButtonDidTouch(sender: UIButton) {
         self.shareSheetView.hidden = false
     }
+    
+    // MARK: - UIViewController Methods
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        insertBlurView(self.backgroundMaskView, style: UIBlurEffectStyle.Dark)
+        insertBlurView(self.dialogHeaderView, style: .Dark)
+    }
 
 }
