@@ -35,6 +35,17 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func dialogImageButtonDidTouch(sender: UIButton) {
+        UIView.animateWithDuration(0.7, animations: { [unowned self] () -> Void in
+            self.dialogView.frame = CGRectMake(0, 0, 375, 667)
+            self.dialogView.layer.cornerRadius = 0
+            self.dialogImageButton.frame = CGRectMake(0, 0, 375, 280)
+            self.shareButton.alpha = 0
+            self.likeButton.alpha = 0
+            self.userProfileButton.alpha = 0
+            self.dialogHeaderView.alpha = 0
+            }) { (_) -> Void in
+                self.performSegueWithIdentifier("segueToDetailViewController", sender: self)
+        }
     }
     
     @IBAction func likeButtonDidTouch(sender: UIButton) {

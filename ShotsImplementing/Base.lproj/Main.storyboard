@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15E49a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15E61b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -49,7 +49,6 @@
                                                 <state key="normal" image="image"/>
                                                 <connections>
                                                     <action selector="dialogImageButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aXn-Qc-T0d"/>
-                                                    <segue destination="1FA-Cn-47H" kind="modal" animates="NO" id="ZcX-4s-fR4"/>
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" id="V1c-bv-WBD">
@@ -244,28 +243,32 @@
                         <outlet property="shareSheetView" destination="rRA-Gn-VuA" id="syb-1n-vjD"/>
                         <outlet property="userPopoverView" destination="50r-Bw-ZpK" id="jks-Jf-F0Z"/>
                         <outlet property="userProfileButton" destination="Uhg-N0-LUN" id="uDP-tZ-jAR"/>
+                        <segue destination="1FA-Cn-47H" kind="modal" identifier="segueToDetailViewController" animates="NO" id="QQx-0y-Xib"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="300.5" y="520.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="QUj-eW-6fS">
             <objects>
-                <viewController id="1FA-Cn-47H" sceneMemberID="viewController">
+                <viewController id="1FA-Cn-47H" customClass="DetailViewController" customModule="ShotsImplementing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="czp-g5-rN8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" id="2jz-Hf-4AB">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="281"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="280"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vqH-ee-Zp2">
                                 <rect key="frame" x="23" y="23" width="47" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="BackButton"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="modal" modalTransitionStyle="crossDissolve" id="l1W-XR-3Pf"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mike | Creative Mints" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="523-ln-PUn">
                                 <rect key="frame" x="75" y="311" width="213" height="22"/>

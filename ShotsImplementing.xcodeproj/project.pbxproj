@@ -42,6 +42,7 @@
 		65E383441C913F2C00A5FC92 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E383271C913F2C00A5FC92 /* TransitionManager.swift */; };
 		65E383451C913F2C00A5FC92 /* TransitionZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E383281C913F2C00A5FC92 /* TransitionZoom.swift */; };
 		65E383461C913F2C00A5FC92 /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E383291C913F2C00A5FC92 /* UnwindSegue.swift */; };
+		65E383491C9162FF00A5FC92 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E383481C9162FF00A5FC92 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,7 @@
 		65E383271C913F2C00A5FC92 /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
 		65E383281C913F2C00A5FC92 /* TransitionZoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionZoom.swift; sourceTree = "<group>"; };
 		65E383291C913F2C00A5FC92 /* UnwindSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnwindSegue.swift; sourceTree = "<group>"; };
+		65E383481C9162FF00A5FC92 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			children = (
 				65BBAAFC1C80134200B3A42B /* AppDelegate.swift */,
 				65DA4DF91C849DE600E0DF96 /* HomeViewController.swift */,
+				65E383481C9162FF00A5FC92 /* DetailViewController.swift */,
 				65BBAB001C80134200B3A42B /* Main.storyboard */,
 				65BBAB031C80134200B3A42B /* Assets.xcassets */,
 				65BBAB051C80134200B3A42B /* LaunchScreen.storyboard */,
@@ -274,6 +277,7 @@
 				65E383461C913F2C00A5FC92 /* UnwindSegue.swift in Sources */,
 				65E383441C913F2C00A5FC92 /* TransitionManager.swift in Sources */,
 				65E3832D1C913F2C00A5FC92 /* BlurView.swift in Sources */,
+				65E383491C9162FF00A5FC92 /* DetailViewController.swift in Sources */,
 				65E383431C913F2C00A5FC92 /* SpringView.swift in Sources */,
 				65E383451C913F2C00A5FC92 /* TransitionZoom.swift in Sources */,
 			);
