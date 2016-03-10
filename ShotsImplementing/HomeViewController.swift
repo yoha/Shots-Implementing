@@ -52,5 +52,9 @@ class HomeViewController: UIViewController {
         insertBlurView(self.backgroundMaskView, style: UIBlurEffectStyle.Dark)
         insertBlurView(self.dialogHeaderView, style: .Dark)
     }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
+    }
 
 }
