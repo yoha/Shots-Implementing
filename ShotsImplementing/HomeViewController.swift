@@ -42,6 +42,10 @@ class HomeViewController: UIViewController {
     
     @IBAction func shareButtonDidTouch(sender: UIButton) {
         self.shareSheetView.hidden = false
+        self.shareSheetView.alpha = 0.0
+        UIView.animateWithDuration(0.5) { [unowned self] () -> Void in
+            self.shareSheetView.alpha = 1.0
+        }
     }
     
     // MARK: - UIViewController Methods
