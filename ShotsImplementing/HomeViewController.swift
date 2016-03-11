@@ -32,6 +32,18 @@ class HomeViewController: UIViewController {
     
     @IBAction func userProfileButtonDidTouch(sender: UIButton) {
         self.userPopoverView.hidden = false
+        
+        let transformScale = CGAffineTransformMakeScale(0.3, 0.3)
+        let transformTranslate = CGAffineTransformMakeTranslation(60, -60)
+        self.userPopoverView.transform = CGAffineTransformConcat(transformScale, transformTranslate)
+        self.userPopoverView.alpha = 0
+        
+        UIView.animateWithDuration(0.5) { [unowned self] () -> Void in
+            let transformScale = CGAffineTransformMakeScale(1.0, 1.0)
+            let transformTranslate = CGAffineTransformMakeTranslation(0, 0)
+            self.userPopoverView.transform = CGAffineTransformConcat(transformScale, transformTranslate)
+            self.userPopoverView.alpha = 1
+        }
     }
     
     @IBAction func dialogImageButtonDidTouch(sender: UIButton) {
