@@ -66,6 +66,16 @@ class HomeViewController: UIViewController {
         
         insertBlurView(self.backgroundMaskView, style: UIBlurEffectStyle.Dark)
         insertBlurView(self.dialogHeaderView, style: .Dark)
+        
+        let transformScale = CGAffineTransformMakeScale(0.5, 0.5)
+        let transformTranslate = CGAffineTransformMakeTranslation(0, -234)
+        self.dialogView.transform = CGAffineTransformConcat(transformScale, transformTranslate)
+        
+        UIView.animateWithDuration(0.5) { [unowned self] () -> Void in
+            let transformScale = CGAffineTransformMakeScale(1.0, 1.0)
+            let transformTranslate = CGAffineTransformMakeTranslation(0, 0)
+            self.dialogView.transform = CGAffineTransformConcat(transformScale, transformTranslate)
+        }
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
