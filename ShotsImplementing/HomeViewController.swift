@@ -43,7 +43,9 @@ class HomeViewController: UIViewController {
     // MARK: - IBAction Methods
     
     @IBAction func maskButtonDidTouch(sender: UIButton) {
+        self.maskButton.hidden = true
         self.hideShareView()
+        self.hideUserPopoverView()
     }
     
     @IBAction func userProfileButtonDidTouch(sender: UIButton) {
@@ -54,8 +56,10 @@ class HomeViewController: UIViewController {
         self.userPopoverView.transform = CGAffineTransformConcat(transformScale, transformTranslate)
         
         self.userPopoverView.alpha = 0.0
-       
-        UIView.animateWithDuration(0.3) { [unowned self] () -> Void in
+        
+        self.maskButton.hidden = false
+        
+        SpringAnimation.spring(0.5) { [unowned self] () -> Void in
             let transformScale = CGAffineTransformMakeScale(1.0, 1.0)
             let transformTranslate = CGAffineTransformMakeTranslation(0, 0)
             self.userPopoverView.transform = CGAffineTransformConcat(transformScale, transformTranslate)
@@ -137,9 +141,14 @@ class HomeViewController: UIViewController {
         SpringAnimation.spring(0.5) { [unowned self] () -> Void in
             self.shareSheetView.alpha = 0
             self.shareSheetView.hidden = true
-            self.maskButton.hidden = true
             self.shareSheetView.transform = CGAffineTransformMakeTranslation(0, 234)
             self.dialogView.transform = CGAffineTransformMakeScale(1, 1)
+        }
+    }
+    
+    private func hideUserPopoverView() {
+        SpringAnimation.spring(0.5) { [unowned self] () -> Void in
+            self.userPopoverView.hidden = true
         }
     }
 
