@@ -68,10 +68,10 @@ class HomeViewController: UIViewController {
         self.shareSheetView.hidden = false
         self.shareSheetView.alpha = 0.0
         self.shareSheetView.transform = CGAffineTransformMakeTranslation(0, 234)
-        UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .CurveEaseInOut, animations: { [unowned self] () -> Void in
+        SpringAnimation.spring(0.5) { [unowned self] () -> Void in
             self.shareSheetView.alpha = 1.0
             self.shareSheetView.transform = CGAffineTransformMakeTranslation(0, 0)
-            }, completion: nil)
+        }
     }
     
     // MARK: - UIViewController Methods
