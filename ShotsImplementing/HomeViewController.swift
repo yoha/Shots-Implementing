@@ -43,7 +43,9 @@ class HomeViewController: UIViewController {
     // MARK: - IBAction Methods
     
     @IBAction func maskButtonDidTouch(sender: UIButton) {
-        self.maskButton.hidden = true
+        SpringAnimation.spring(0.5) { [unowned self] () -> Void in
+            self.maskButton.alpha = 0
+        }
         self.hideShareView()
         self.hideUserPopoverView()
     }
@@ -57,7 +59,7 @@ class HomeViewController: UIViewController {
         
         self.userPopoverView.alpha = 0.0
         
-        self.maskButton.hidden = false
+        self.showMask()
         
         SpringAnimation.spring(0.5) { [unowned self] () -> Void in
             let transformScale = CGAffineTransformMakeScale(1.0, 1.0)
@@ -68,7 +70,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func dialogImageButtonDidTouch(sender: UIButton) {
-        UIView.animateWithDuration(0.7, animations: { [unowned self] () -> Void in
+        SpringAnimation.springWithCompletion(0.5, animations: { [unowned self] () -> Void in
             self.dialogView.frame = CGRectMake(0, 0, 375, 667)
             self.dialogView.layer.cornerRadius = 0
             self.dialogImageButton.frame = CGRectMake(0, 0, 375, 280)
@@ -92,7 +94,7 @@ class HomeViewController: UIViewController {
         self.emailButton.transform = CGAffineTransformMakeTranslation(0, 234)
         self.twitterButton.transform = CGAffineTransformMakeTranslation(0, 234)
         self.facebookButton.transform = CGAffineTransformMakeTranslation(0, 234)
-        self.maskButton.hidden = false
+        self.showMask()
         SpringAnimation.spring(0.5) { [unowned self] () -> Void in
             self.shareSheetView.alpha = 1
             self.shareSheetView.transform = CGAffineTransformMakeTranslation(0, 0)
@@ -124,7 +126,7 @@ class HomeViewController: UIViewController {
         let transformTranslate = CGAffineTransformMakeTranslation(0, -234)
         self.dialogView.transform = CGAffineTransformConcat(transformScale, transformTranslate)
         
-        UIView.animateWithDuration(0.5) { [unowned self] () -> Void in
+        SpringAnimation.spring(0.5) { [unowned self] () -> Void in
             let transformScale = CGAffineTransformMakeScale(1.0, 1.0)
             let transformTranslate = CGAffineTransformMakeTranslation(0, 0)
             self.dialogView.transform = CGAffineTransformConcat(transformScale, transformTranslate)
@@ -152,4 +154,11 @@ class HomeViewController: UIViewController {
         }
     }
 
+    private func showMask() {
+        self.maskButton.hidden = false
+        self.maskButton.alpha = 0
+        SpringAnimation.spring(0.5) { [unowned self] () -> Void in
+            self.maskButton.alpha = 1
+        }
+    }
 }
