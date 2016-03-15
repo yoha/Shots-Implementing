@@ -10,6 +10,13 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    // MARK: - Stored Properties
+    
+    var dynamicAnimator: UIDynamicAnimator!
+    var attachmentBehavior: UIAttachmentBehavior!
+    var gravityBehavior: UIGravityBehavior!
+    var snapBehavior: UISnapBehavior!
+    
     // MARK: - IBOutlet Properties
     
     @IBOutlet weak var userProfileButton: UIButton!
@@ -142,6 +149,8 @@ class HomeViewController: UIViewController {
             let transformTranslate = CGAffineTransformMakeTranslation(0, 0)
             self.dialogView.transform = CGAffineTransformConcat(transformScale, transformTranslate)
         }
+        
+        self.dynamicAnimator = UIDynamicAnimator(referenceView: self.view)
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
