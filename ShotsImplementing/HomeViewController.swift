@@ -115,6 +115,8 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func handlePanGesture(sender: UIPanGestureRecognizer) {
+        let locationOfPanGesture = sender.locationInView(self.view)
+        self.dialogView.center = locationOfPanGesture
     }
 
     
