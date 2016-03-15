@@ -38,7 +38,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var dialogAvatarImageView: UIImageView!
     @IBOutlet weak var dialogFavoritesLabel: UILabel!
     
-    
+    @IBOutlet weak var panGestureRecorgnizer: UIPanGestureRecognizer!
     
     // MARK: - IBAction Methods
     
@@ -113,6 +113,10 @@ class HomeViewController: UIViewController {
             self.shareLabelsView.alpha = 1
         }
     }
+    
+    @IBAction func handlePanGesture(sender: UIPanGestureRecognizer) {
+    }
+
     
     // MARK: - UIViewController Methods
     

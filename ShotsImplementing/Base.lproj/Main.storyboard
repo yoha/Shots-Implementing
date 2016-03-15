@@ -118,11 +118,15 @@
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.93725490196078431" green="0.96078431372549022" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="30e-4a-531" appends="YES" id="nNc-Jj-6xw"/>
+                                        </connections>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Uhg-N0-LUN">
                                         <rect key="frame" x="304" y="45" width="47" height="47"/>
@@ -267,6 +271,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="30e-4a-531">
+                    <connections>
+                        <action selector="handlePanGesture:" destination="BYZ-38-t0r" id="v4e-ok-4EY"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="300.5" y="520.5"/>
         </scene>
