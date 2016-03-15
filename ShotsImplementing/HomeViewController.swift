@@ -123,12 +123,30 @@ class HomeViewController: UIViewController {
     
     @IBAction func handlePanGesture(sender: UIPanGestureRecognizer) {
         let locationOfPanGesture = sender.locationInView(self.view)
+        let locationOfDialogView = sender.locationInView(self.dialogView)
         
-        if sender.state == UIGestureRecognizerState.Began || sender.state == UIGestureRecognizerState.Changed {
-            self.dialogView.center = locationOfPanGesture
+        if sender.state == UIGestureRecognizerState.Began {
+            self.dynamicAnimator.removeAllBehaviors()
+            let centerOffset = UIOffsetMake(locationOfDialogView.x - CGRectGetMidX(self.dialogView.bounds), locationOfDialogView.y - CGRectGetMidY(self.dialogView.bounds))
+            self.attachmentBehavior = UIAttachmentBehavior(item: self.dialogView, offsetFromCenter: centerOffset, attachedToAnchor: locationOfPanGesture)
+            self.attachmentBehavior.frequency = 0
+            self.dynamicAnimator.addBehavior(self.attachmentBehavior)
+        }
+        else if sender.state == UIGestureRecognizerState.Changed {
+            self.attachmentBehavior.anchorPoint = locationOfPanGesture
         }
         else if sender.state == UIGestureRecognizerState.Ended {
-            self.dialogView.hidden = true
+            self.dynamicAnimator.removeBehavior(self.attachmentBehavior)
+            self.snapBehavior = UISnapBehavior(item: self.dialogView, snapToPoint: self.view.center)
+            self.dynamicAnimator.addBehavior(self.snapBehavior)
+            
+            let translationOfPanGestureInPoint = sender.translationInView(self.view)
+            if translationOfPanGestureInPoint.y > 200 {
+                self.dynamicAnimator.removeAllBehaviors()
+                let gravityBehavior = UIGravityBehavior(items: [self.dialogView])
+                gravityBehavior.gravityDirection = CGVectorMake(0, 10)
+                self.dynamicAnimator.addBehavior(gravityBehavior)
+            }
         }
     }
     
