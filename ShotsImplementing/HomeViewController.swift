@@ -18,7 +18,7 @@ class HomeViewController: UIViewController {
     var snapBehavior: UISnapBehavior!
     
     var data = getData()
-    let indexForData = 1
+    var indexForData = 1
     
     // MARK: - IBOutlet Properties
     
@@ -149,6 +149,17 @@ class HomeViewController: UIViewController {
                 let gravityBehavior = UIGravityBehavior(items: [self.dialogView])
                 gravityBehavior.gravityDirection = CGVectorMake(0, 10)
                 self.dynamicAnimator.addBehavior(gravityBehavior)
+                
+                delay(0.5, closure: { [unowned self] () -> () in
+                    self.indexForData = self.indexForData == self.data.count - 1 ? 0 : self.indexForData + 1
+                    
+                    self.dynamicAnimator.removeAllBehaviors()
+                    self.snapBehavior = UISnapBehavior(item: self.dialogView, snapToPoint: self.view.center)
+                    self.attachmentBehavior.anchorPoint = self.view.center
+                    
+                    self.dialogView.center = self.view.center
+                    self.viewDidAppear(true)
+                })
             }
         }
     }
@@ -161,6 +172,14 @@ class HomeViewController: UIViewController {
         insertBlurView(self.backgroundMaskView, style: UIBlurEffectStyle.Dark)
         insertBlurView(self.dialogHeaderView, style: .Dark)
         
+        self.dynamicAnimator = UIDynamicAnimator(referenceView: self.view)
+        
+        self.dialogView.alpha = 0
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        
         let transformScale = CGAffineTransformMakeScale(0.5, 0.5)
         let transformTranslate = CGAffineTransformMakeTranslation(0, -234)
         self.dialogView.transform = CGAffineTransformConcat(transformScale, transformTranslate)
@@ -171,13 +190,12 @@ class HomeViewController: UIViewController {
             self.dialogView.transform = CGAffineTransformConcat(transformScale, transformTranslate)
         }
         
-        self.dynamicAnimator = UIDynamicAnimator(referenceView: self.view)
-        
         self.dialogAvatarImageView.image = UIImage(named: self.data[self.indexForData]["avatar"]!)
         self.dialogImageButton.setImage(UIImage(named: self.data[self.indexForData]["image"]!), forState: UIControlState.Normal)
         self.backgroundImageView.image = UIImage(named: self.data[self.indexForData]["image"]!)
         self.dialogHeaderAuthorLabel.text = self.data[self.indexForData]["author"]
         self.dialogHeaderTitleLabel.text = self.data[self.indexForData]["title"]
+        self.dialogView.alpha = 1
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
