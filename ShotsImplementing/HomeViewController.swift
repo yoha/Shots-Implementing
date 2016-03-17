@@ -18,6 +18,7 @@ class HomeViewController: UIViewController {
     var snapBehavior: UISnapBehavior!
     
     var data = getData()
+    let indexForData = 1
     
     // MARK: - IBOutlet Properties
     
@@ -171,6 +172,12 @@ class HomeViewController: UIViewController {
         }
         
         self.dynamicAnimator = UIDynamicAnimator(referenceView: self.view)
+        
+        self.dialogAvatarImageView.image = UIImage(named: self.data[self.indexForData]["avatar"]!)
+        self.dialogImageButton.setImage(UIImage(named: self.data[self.indexForData]["image"]!), forState: UIControlState.Normal)
+        self.backgroundImageView.image = UIImage(named: self.data[self.indexForData]["image"]!)
+        self.dialogHeaderAuthorLabel.text = self.data[self.indexForData]["author"]
+        self.dialogHeaderTitleLabel.text = self.data[self.indexForData]["title"]
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
