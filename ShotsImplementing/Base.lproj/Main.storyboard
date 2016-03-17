@@ -296,7 +296,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="BackButton"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="modal" modalTransitionStyle="crossDissolve" id="l1W-XR-3Pf"/>
+                                    <action selector="backButtonDidTouch:" destination="1FA-Cn-47H" eventType="touchUpInside" id="dPl-Zq-Vhs"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mike | Creative Mints" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="523-ln-PUn">
@@ -316,7 +316,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" id="qc5-7q-8z1">
-                                <rect key="frame" x="23" y="356" width="329" height="288"/>
+                                <rect key="frame" x="21" y="354" width="333" height="292"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">You guys, the new "How To Draw: drawing and sketching objects and environments from your imagination" book by S. Robertson is just amazing! I spent the whole weekend gobbling it up and of course I couldn't help but take the watercolors myself! :)
@@ -331,6 +331,14 @@ Behance</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="authorLabel" destination="523-ln-PUn" id="WWp-KI-TqI"/>
+                        <outlet property="avatarImageView" destination="cAy-7g-r9r" id="mJo-eW-uC3"/>
+                        <outlet property="backButton" destination="vqH-ee-Zp2" id="XR2-TV-50W"/>
+                        <outlet property="descriptionTextView" destination="qc5-7q-8z1" id="b86-k9-i8G"/>
+                        <outlet property="imageView" destination="2jz-Hf-4AB" id="QTt-Tm-d0A"/>
+                        <segue destination="BYZ-38-t0r" kind="modal" identifier="segueToHomeViewController" animates="NO" id="0BU-4O-Qck"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SUy-2N-Few" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

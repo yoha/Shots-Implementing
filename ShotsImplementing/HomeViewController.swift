@@ -198,6 +198,14 @@ class HomeViewController: UIViewController {
         self.dialogView.alpha = 1
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "segueToDetailViewController" {
+            guard let validDetailViewController = segue.destinationViewController as? DetailViewController else { return }
+            validDetailViewController.data = self.data
+            validDetailViewController.indexForData = self.indexForData
+        }
+    }
+    
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
     }
