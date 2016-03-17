@@ -17,6 +17,8 @@ class HomeViewController: UIViewController {
     var gravityBehavior: UIGravityBehavior!
     var snapBehavior: UISnapBehavior!
     
+    var data = getData()
+    
     // MARK: - IBOutlet Properties
     
     @IBOutlet weak var userProfileButton: UIButton!
